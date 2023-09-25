@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+   <param name="cam1_Topic"  type="str"  value="/camera1/color/image_raw/compressed" />
+   <param name="cam2_Topic"  type="str"  value="/camera2/color/image_raw/compressed" />
+   <node pkg="yolo_visual_servoing" type="switchImage_node" name="switchImage_node" /> 
+
+   <!-- <param name="depth1_Topic"  type="str"  value="/depthImage" />output="screen"/>
+   <param name="depth2_Topic"  type="str"  value="/camera2/aligned_depth_to_color/image_raw" />
+
+   <node pkg="yolo_visual_servoing" type="switchDepth_node" name="switchDepth_node" output="screen"/>-->
+
+</launch>

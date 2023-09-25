@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+
+	<param name="detection_mask"    type="str"    value="/yolact_ros/detections" />
+	<param name="depth_lidar_image" type="str"    value="/depthImage" />
+	<param name="yolactImg_input"   type="str"    value="/camera/color/image_raw" />
+
+<!-- params -->
+    <group ns="control_params">
+        <rosparam file="$(find yolo_visual_servoing)/cfg/cfg_params.yaml" />
+    </group>
+    
+  <!-- <group ns="matrix_file">
+        <rosparam file="$(find lidar_camera_fusion)/cfg/cfg_params.yaml" />
+    </group>-->
+
+   <node pkg="yolo_visual_servoing" type="depth_measure_segmentation_node" name="depth_measure_segmentation_node" output="screen" /> 
+
+<!--<include file="$(find yolo_visual_servoing)/launch/change_topic.launch" />
+<include file="$(find lidar_camera_fusion)/launch/pcOnImage.launch" />-->
+
+  
+</launch>
+
+
+
