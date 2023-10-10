@@ -5,6 +5,7 @@
 #include <sensor_msgs/image_encodings.h>
 #include <image_transport/image_transport.h>
 #include <opencv2/core/core.hpp>
+#include <opencv2/core/eigen.hpp>
 #include <std_msgs/Header.h>
 
 #include <iostream>
